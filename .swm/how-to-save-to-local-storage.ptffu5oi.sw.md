@@ -7,10 +7,10 @@ title: How to save to Local Storage
 
 ---
 
-To save a task list to Local Storage, use the <SwmToken path="/src/utils/storage.tsx" pos="3:4:4" line-data="export const saveTasksToLocalStorage = (data: Task[]) =&gt; {">`saveTasksToLocalStorage`</SwmToken> function.
+To save a task list to Local Storage, use the <SwmToken path="/src/utils/storage.tsx" pos="3:4:4" line-data="export const saveTasksToLocalStorage = (data: Task[]): void =&gt; {">`saveTasksToLocalStorage`</SwmToken> function.
 
 ```tsx
-export const saveTasksToLocalStorage = (data: Task[]) => {
+export const saveTasksToLocalStorage = (data: Task[]): void => {
   localStorage.setItem("tasks", JSON.stringify(data));
 };
 ```

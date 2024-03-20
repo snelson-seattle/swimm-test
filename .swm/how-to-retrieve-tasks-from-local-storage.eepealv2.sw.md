@@ -5,10 +5,10 @@ title: How to retrieve tasks from Local Storage
 
 ---
 
-Use <SwmToken path="/src/utils/storage.tsx" pos="7:4:4" line-data="export const fetchTasksFromLocalStorage = () =&gt; {">`fetchTasksFromLocalStorage`</SwmToken> to retrieve the list of saved tasks from Local Storage. If no tasks exist, the function returns null.
+Use <SwmToken path="/src/utils/storage.tsx" pos="17:4:4" line-data="export const clearTasksFromLocalStorage = () =&gt; {">`clearTasksFromLocalStorage`</SwmToken> to retrieve the list of saved tasks from Local Storage. If no tasks exist, the function returns null.
 
 ```tsx
-export const fetchTasksFromLocalStorage = () => {
+export const fetchTasksFromLocalStorage = (): Task[] | null => {
   const tasks = localStorage.getItem("tasks");
 
   if (tasks) {
