@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Task } from "../types/Task";
+import { saveTasksToLocalStorage } from "../utils/storage";
 
 interface Props {
   tasks: Task[],
@@ -27,6 +28,7 @@ function TaskInput({tasks, setTasks}: Props) {
       }
 
       setTasks((tasks) => [...tasks, item]);
+      saveTasksToLocalStorage([...tasks, item]);
     }
 
     setTask("");
